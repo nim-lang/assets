@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nimrod Code</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="site">
+			
+			<!-- site_head -->
+			<div id="site_head">
+				<div id="logo"></div>
+			</div>
+			
+			<!-- site_neck -->
+			<div id="site_neck">
+				<a href="#" class="active">home</a>
+				<a href="#">news</a>
+				<a href="#">docs</a>
+				<a href="#">download</a>
+				<a href="#">community</a>
+				<a href="#">faq</a>
+			</div>
+			
+			<!-- site_body -->
+			<div id="site_body">
+				
+				<!-- page -->
+				<div id="page">
+					<div class="quote-image"></div>
+					<p class="quote">The most important thing in the programming language is the name. A language will not succeed without a good name. I have recently invented a very good name and now I am looking for a suitable language.<br><b style="float:right">-- D. E. Knuth</b></p>
+					<h1>Wecom to Nimrod</h1>
+					<p><b>Nimrod</b> is a statically typed, imperative programming language that tries to give the programmer ultimate power without compromises on runtime efficiency. This means it focuses on compile-time mechanisms in all their various forms.<br><br>Beneath a nice infix/indentation based syntax with a powerful (AST based, hygienic) macro system lies a semantic model that supports a soft realtime GC on thread local heaps. Asynchronous message passing is used between threads, so no "stop the world" mechanism is necessary. An unsafe shared memory heap is also provided for the increased efficiency that results from that model.</p>
+					<h2>Nimrod looks like this:</h2>
+					<pre><span class="comment"># compute average line length</span>
+<span class="keyword">var</span> count <span class="operator">=</span> <span class="value">0</span>
+<span class="keyword">var</span> sum <span class="operator">=</span> <span class="value">0.0</span>
+
+<span class="keyword">for</span> line <span class="keyword">in</span> stdin<span class="operator">.</span>lines<span class="operator">:</span>
+  count <span class="operator">+=</span> <span class="value">1</span>
+  sum <span class="operator">+=</span> line<span class="operator">.</span>len
+
+echo <span class="value">"Average line length: "</span><span class="operator">,</span>
+  <span class="keyword">if</span> count<span class="operator">:</span> sum <span class="operator">/</span> count <span class="keyword">else</span><span class="operator">:</span> <span class="value">0</span></pre>
+					<h2>Nimrod is Efficient</h2>
+					<ul>
+						<li>Native code generation (currently via compilation to C), not dependent on a virtual machine: <b>Nimrod produces small executables without dependencies for easy redistribution.</b></li>
+						<li>A fast <b>non-tracing</b> garbage collector that supports soft real-time systems (like games).</li>
+						<li>System programming features: Ability to manage your own memory and access the hardware directly. Pointers to garbage collected memory are distinguished from pointers to manually managed memory.</li>
+						<li>Zero-overhead iterators.</li>
+						<li>Cross-module inlining.</li>
+						<li>Dynamic method binding with inlining and without virtual method table.</li>
+						<li>Compile time evaluation of user-defined functions.</li>
+						<li>Whole program dead code elimination: Only used functions are included in the executable.</li>
+						<li>Value-based datatypes: For instance, objects and arrays can be allocated on the stack.</li>
+					</ul>
+					<h2>Nimrod is Expressive</h2>
+					<ul>
+						<li><b>The Nimrod compiler and all of the standard library are implemented in Nimrod.</b></li>
+						<li>Built-in high level datatypes: strings, sets, sequences, etc.</li>
+						<li>Modern type system with local type inference, tuples, variants, generics, etc.</li>
+						<li>User-defineable operators; code with new operators is often easier to read than code which overloads built-in operators. For example, a =~ operator is defined in the re module.</li>
+						<li>Macros can modify the abstract syntax tree at compile time.</li>
+					</ul>
+					<h2>Nimrod is Elegant</h2>
+					<ul>
+						<li>Macros can use the imperative paradigm to construct parse trees. Nimrod does not require a different coding style for meta programming.</li>
+						<li>Macros cannot change Nimrod's syntax because there is no need for it. Nimrod's syntax is flexible enough.</li>
+						<li>Statements are grouped by indentation but can span multiple lines. Indentation must not contain tabulators so the compiler always sees the code the same way as you do.</li>
+					</ul>
+					<h2>Nimrod plays well with others</h2>
+					<ul>
+						<li>The Nimrod Compiler runs on Windows, Linux, BSD and Mac OS X. Porting to other platforms is easy.</li>
+						<li><b>The Nimrod Compiler can also generate C++ or Objective C for easier interfacing.</b></li>
+						<li>There are lots of bindings: for example, bindings to GTK2, the Windows API, the POSIX API, OpenGL, SDL, Cario, Python, Lua, TCL, X11, libzip, PCRE, libcurl, mySQL and SQLite are included in the standard distribution.</li>
+						<li>A C to Nimrod conversion utility: New bindings to C libraries are easily generated by c2nim.</li>
+					</ul>
+					<h1>Roadmap to 1.0</h1>
+					<h3>version 0.9.2</h3>
+					<ul>
+						<li>overloading based on ASTs (like already possible for term rewriting macros)</li>
+						<li>better interaction between macros, templates and overloading</li>
+						<li>the effect system will be extended</li>
+						<li>the symbol binding rules for generics and templates may change again</li>
+					</ul>
+					<h3>version 0.9.x</h3>
+					<ul>
+						<li>first class iterators</li>
+						<li>message passing performance will be greatly improved</li>
+						<li>the syntactic distinction between statements and expressions will be removed</li>
+						<li>exception tracking</li>
+						<li>the need for forward declarations may be removed</li>
+					</ul>
+				</div>
+				
+				<!-- sidebar_wrapper -->
+				<div id="sidebar_wrap">
+					<div id="sidebar">
+						<div id="sidebar_head"></div>
+						<h2>Latest News</h2>
+						<a href="#" class="news">
+							<h3>Sept 9, 2012</h3>
+							<p>Nimrod version 0.9 has been released! Get it...</p>
+						</a>
+						<a href="#" class="news">
+							<h3>Feb 2, 2012</h3>
+							<p>Nimrod version 0.8.14 has been released! ...</p>
+						</a>
+						<a href="#" class="news">
+							<h3>July 10, 2012</h3>
+							<p>Nimrod version 0.8.10 has been released! ...</p>
+						</a>
+						<h2>More Links</h2>
+						<a href="http://forum.nimrod-code.org/" id="link_forum" class="link">User Forum</a>
+						<a href="https://github.com/nimrod-code/Aporia" id="link_aporia" class="link">Aporia IDE</a>
+						<a href="http://build.nimrod-code.org/" id="link_nimbuild" class="link">Nimbuild</a>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- site_foot -->
+			<div id="site_foot">
+				<div id="legal">Copyright &copy; 2013 - Andreas Rumpfs &amp; Contributors - All rights reserved - <a href="http://reign-studios.com/philipwitte/">Design by Philip Witte</a></div>
+			</div>
+			
+		</div>
+	</body>
+</html>

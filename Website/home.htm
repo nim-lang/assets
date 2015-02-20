@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nim Language</title>
+		<link rel="stylesheet" href="site.css">
+		<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	<body>
+		
+		<!--- #head --->
+		<header id="head">
+			<div class="page-layout tall">
+				<div id="head-logo"></div>
+				<a id="head-logo-link" href="home.htm"></a>
+				<nav id="head-links">
+					<a href="#" class="active">home</a>
+					<a href="docs.htm">docs</a>
+					<a href="learn.htm">learn</a>
+					<a href="forum.htm">forum</a>
+					<a href="#">download</a>
+					<a href="#">faq</a>
+				</nav>
+			</div>
+		</header>
+		
+		<!--- #neck --->
+		<section id="neck" class="home">
+			<div class="page-layout tall">
+				<div id="glow-arrow"></div>
+				<div id="slideshow">
+					<div id="slide0" class="active">
+						<div>
+							<h2>nim looks like this..</h2>
+<pre>
+<span class="cmt"># compute average line length</span>
+<span class="kwd">var</span>
+<span class="tab">  </span>sum = <span class="val">0</span>
+<span class="tab end">  </span>count = <span class="val">0</span>
+
+<span class="kwd">for</span> line <span class="kwd">in</span> stdin.lines:
+<span class="tab">  </span>sum += line.len
+<span class="tab end">  </span>count += <span class="val">1</span>
+
+echo(<span class="val">"Average line length: "</span>,
+  <span class="kwd">if</span> count: sum / count <span class="kwd">else</span>: <span class="val">0</span>)
+</pre>
+						</div>
+						<div>
+							<h2>..and this...</h2>
+<pre>
+<span class="cmt"># create and greet someone</span>
+<span class="kwd">type</span> <span class="def">Person</span> = <span class="typ">object</span>
+<span class="tab">  </span>name: <span class="typ">string</span>
+<span class="tab end">  </span>age: <span class="typ">int</span>
+
+<span class="kwd">proc</span> <span class="def">greet</span>(p:<span class="typ">Person</span>) =
+<span class="tab">  </span>echo <span class="val">"Hi, I'm "</span>, p.name, <span class="val">"."</span>
+<span class="tab end">  </span>echo <span class="val">"I am "</span>, p.age, <span class="val">" years old."</span>
+
+<span class="kwd">var</span> p = <span class="typ">Person</span>(name:<span class="val">"Jon"</span>, age:<span class="val">18</span>)
+p.greet() <span class="cmt"># or greet(p)</span>
+</pre>
+						</div>
+					</div>
+					<div id="slide1" class="init">
+						<p>The most important thing in the programming language is the name. A language will not succeed without a good name. I have recently invented a very good name and now I am looking for a suitable language.</p>
+						<div>-- D. E. Knuth</div>
+					</div>
+				</div>
+				<div id="slideshow-nav">
+					<div id="slideControl0" onclick="slideshow_click(0)" class="active"></div>
+					<div id="slideControl1" onclick="slideshow_click(1)"></div>
+					<div id="slideControl2" onclick="slideshow_click(2)"></div>
+					<div id="slideControl3" onclick="slideshow_click(3)"></div>
+					<div id="slideControl4" onclick="slideshow_click(4)"></div>
+				</div>
+				<aside id="sidebar">
+					<h3>More Links</h3>
+					<div id="sidebar-links">
+						<a href="#" id="links-forum">Community</a>
+						<a href="#" id="links-editors">IDE Support</a>
+						<a href="#" id="links-nimbuild">Build Server</a>
+						<a href="#" id="links-github">Github Repo</a>
+					</div>
+					<h3 class="blue">Latest News</h3>
+					<div id="sidebar-news">
+						<a href="#">
+							<h4>August 24th, 2014</h4>
+							Nimrod renamed to Nim with version 0.9.6. Plus a new website design!
+						</a>
+						<a href="#">
+							<h4>April 21th, 2014</h4>
+							Nimrod version 0.9.4 has been released!
+						</a>
+						<a href="#">
+							<h4>Feb 11th, 2014</h4>
+							Nimrod featured in Dr. Dobbs journal
+						</a>
+						<a href="#">
+							<h4>Jan 15th, 2014</h4>
+							Andreas Rumpf's talk on Nimrod at Strange Loop 2013 is now online
+						</a>
+						<a href="#">
+							<h4>May 20th, 2013</h4>
+							Nimrod-lang.com gets a new website design!
+						</a>
+						<a href="#" class="blue">See All News...</a>
+					</div>
+				</aside>
+			</div>
+		</section>
+		
+		<!--- #body --->
+		<section id="body">
+			<div id="body-border"></div>
+			<div id="glow-line"></div>
+			<div class="page-layout">
+				<article id="content" class="page">
+					<h1 id="welcome-to-nimrod">Welcome to Nim language</h1>
+					<p><i>Nim</i> is a statically typed, imperative programming language that tries to give the programmer ultimate power without compromises on runtime efficiency. This means it focuses on compile-time mechanisms in all their various forms.</p>
+					<p>Beneath a nice infix/indentation based syntax with a powerful (hygienic AST based) macro system lies a semantic model that supports a soft realtime GC on thread local heaps. Asynchronous message passing is used between threads, so no &quot;stop the world&quot; mechanism is necessary. An unsafe shared memory heap is also provided for the increased efficiency that results from that model.</p>
+					<h2 id="nimrod-is-efficient">Nim is efficient</h2>
+					<ul>
+						<li>Native code generation (currently via compilation to C), not dependent on a virtual machine: <b>Nim produces small executables without dependencies for easy redistribution.</b></li>
+						<li>A fast <b>non-tracing</b> garbage collector that supports <a href=#">soft real-time systems</a> (like games).</li>
+						<li>System programming features: Ability to manage your own memory and access the hardware directly. Pointers to garbage collected memory are distinguished from pointers to manually managed memory.</li>
+						<li>Zero-overhead iterators.</li>
+						<li>Cross-module inlining.</li>
+						<li>Dynamic method binding with inlining and without virtual method table.</li>
+						<li>Compile time evaluation of user-defined functions.</li>
+						<li>Whole program dead code elimination: Only <em>used functions</em> are included in the executable.</li>
+						<li>Value-based datatypes: For instance, objects and arrays can be allocated on the stack.</li>
+					</ul>
+					
+					<h2 id="nimrod-is-expressive">Nim is expressive</h2>
+					<ul>
+						<li><b>The Nim compiler and all of the standard library are implemented in Nim.</b></li>
+						<li>Built-in high level datatypes: strings, sets, sequences, etc.</li>
+						<li>Modern type system with local type inference, tuples, variants, generics, etc.</li>
+						<li>User-defineable operators; code with new operators is often easier to read than code which overloads built-in operators. For example, a <span class="pre">=~</span> operator is defined in the <span class="pre">re</span> (regular expressions) module.</li>
+						<li>Macros can modify the abstract syntax tree at compile time.</li>
+					</ul>
+					
+					<h2 id="nimrod-is-elegant">Nim is elegant</h2>
+					<ul>
+						<li>Macros can use the imperative paradigm to construct parse trees. Nim does not require a different coding style for meta programming.</li>
+						<li>Macros cannot change Nim's syntax because there is no need for it. Nim's syntax is flexible enough.</li>
+						<li>Statements are grouped by indentation but can span multiple lines. Indentation must not contain tabulators so the compiler always sees the code the same way as you do.</li>
+					</ul>
+					
+					<h2 id="nimrod-plays-nice-with-others">Nim plays nice with others</h2>
+					<ul>
+						<li>The Nim Compiler runs on Windows, Linux, BSD and Mac OS X.<br>Porting to other platforms is easy.</li>
+						<li><b>The Nim Compiler can also generate C++ or Objective C for easier interfacing.</b></li>
+						<li>There are lots of bindings: for example, bindings to GTK2, the Windows API, the POSIX API, OpenGL, SDL, Cairo, Python, Lua, TCL, X11, libzip, PCRE, libcurl, mySQL and SQLite are included in the standard distribution or can easily be obtained via Nim's package manager: <a class="reference external" href="https://github.com/nimrod-code/babel">Babel</a>.</li>
+						<li>New bindings to C libraries are easily generated with Nim's C-to-Nim utility: <a href="#">c2nim</a>.</li>
+					</ul>
+					
+					<h2 id="roadmap-to-1-0">Roadmap to 1.0</h2>
+					<p>Please have a look at this <a class="reference external" href="https://github.com/Araq/Nim/wiki/Feature-Matrix">wiki page</a> for an up-to-date overview. </p>
+				</article>
+			</div>
+		</section>
+		
+		<!--- #foot --->
+		<footer id="foot" class="home">
+			<div class="page-layout tall">
+				<div id="foot-links">
+					<div>
+						<h4>Documentation</h4>
+						<a href="docs.htm">Stable Documentation</a>
+						<a href="docs.htm">Development Documentation</a>
+						<a href="https://github.com/Araq/Nimrod">Github Issues &amp; Requests</a>
+					</div>
+					<div>
+						<h4>Community</h4>
+						<a href="forum.htm">User Forum</a>
+            <a href="http://webchat.freenode.net/?channels=nimlang">Online IRC</a>
+            <a href="http://build.nimrod-lang.org/irclogs/">IRC Logs</a>
+					</div>
+				</div>
+				<div id="foot-legal">
+					<h4>Written in Nim - Powered by <a href="#">Jester</a></h4>
+					Web Design by <a href="#">Philip Witte</a> &amp; <a href="#">Dominik Picheta</a><br>
+					Copyright &copy; 2014 - <a href="#">Andreas Rumpf</a> &amp; <a href="#">Contributors</a>
+				</div>
+				<div id="mascot"></div>
+			</div>
+		</footer>
+		
+		<script src="home.js"></script>
+		
+	</body>
+</html>
