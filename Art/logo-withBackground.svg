@@ -506,7 +506,7 @@
        xlink:href="#linearGradient5122"
        id="linearGradient13686"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.56658293,0,0,1,111.78894,324.86218)"
+       gradientTransform="matrix(0.56658293,0,0,1,111.78894,270.68845)"
        x1="265.33334"
        y1="97.777779"
        x2="265.33334"
@@ -672,6 +672,16 @@
        y1="101.33333"
        x2="334.36316"
        y2="88.86187" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4287">
+      <path
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc"
+         id="path4289"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:159.73602295px;line-height:125%;font-family:Discognate;-inkscape-font-specification:'Discognate Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:visible;visibility:visible;fill:#ffd201;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+         d="m 313.68522,389.2083 -6.70605,4 0,-29.21477 c -4e-5,-1.37098 -0.44712,-2.62278 -1.34122,-3.75538 -0.89417,-1.13254 -1.99694,-1.69883 -3.3083,-1.69886 l -8.49434,0 -0.0894,30.66901 -6.70606,0 -0.0894,-30.66901 -11.89207,0 -0.0894,30.66901 -6.88489,0 -0.0894,-36.65975 37.82214,0 c 2.14589,4e-5 3.96398,0.77495 5.45426,2.32476 1.54979,1.49027 2.32471,3.30836 2.32476,5.45426 l 0.0894,28.88073 m -57.93558,-45.24351 -6.9743,0 0,-3.33194 6.88488,-4 0.0894,7.33194 m 0,45.24351 -6.88488,0 -0.0894,-37.0174 6.9743,0 0,37.0174 m -18.71353,0 -6.70606,0 0,-25.21477 c -3e-5,-1.37098 -0.44709,-2.62278 -1.3412,-3.75538 -0.89417,-1.13254 -1.99696,-1.69883 -3.30833,-1.69886 l -9.85917,0 -0.0894,34.66901 -6.88488,-4 -0.0894,-36.65975 20.41003,0 c 2.14592,4e-5 3.964,0.77495 5.45426,2.32476 1.54981,1.49027 2.32473,3.30836 2.32476,5.45426 l 0.0894,28.88073"
+         inkscape:connector-curvature="0" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -681,8 +691,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="298.03187"
-     inkscape:cy="74.712473"
+     inkscape:cx="270.31046"
+     inkscape:cy="141.72406"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -705,7 +715,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -714,7 +724,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-796.36218)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <rect
        y="624.23718"
        x="-410.25"
@@ -883,11 +894,12 @@
            id="path4870" />
         <path
            style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.75313804;fill:url(#linearGradient13686);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
-           d="m 187.33333,382.86218 150.33334,0 0,45.55556 c -24.1364,-4.93079 -137.23023,-8.7494 -150.33334,0 z"
+           d="m 187.33333,328.68845 150.33334,0 0,45.55556 c -24.1364,-4.93079 -137.23023,-8.7494 -150.33334,0 z"
            id="rect4706"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="ccccc"
-           clip-path="url(#clipPath8885)" />
+           clip-path="url(#clipPath4287)"
+           transform="translate(0,54.17373)" />
         <g
            id="g9627"
            style="filter:url(#filter9638)">
