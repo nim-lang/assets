@@ -1,4 +1,13 @@
-This stuff belongs to the Nim project and may not be used in a way that might cause someone to see non-existant affiliation between you and the Nim project.
+# Nim Assets
+
+This repo contains the Nim logo and other related graphical assets. In particular:
+
+* logo-crown ([PNG](https://github.com/nim-lang/assets/blob/master/Art/logo-crown.png)) - to be used on a light background.
+* logo-on-black ([SVG](https://github.com/nim-lang/assets/blob/master/Art/logo-on-black.svg)) - to be used on a dark background.
+
+## Licensing
+
+This artwork belongs to the Nim project and may not be used in a way that might cause someone to see non-existant affiliation between you and the Nim project.
 
 The following adapted lines from the Apache Trademark Policy show what sort of use is acceptable:
 
