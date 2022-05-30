@@ -2,8 +2,9 @@
 
 This repo contains the Nim logo and other related graphical assets. In particular:
 
-* logo-crown ([PNG](https://github.com/nim-lang/assets/blob/master/Art/logo-crown.png)) - to be used on a light background.
-* logo-on-black ([SVG](https://github.com/nim-lang/assets/blob/master/Art/logo-on-black.svg)) - to be used on a dark background.
+* logo-crown ([PNG](https://github.com/nim-lang/assets/blob/master/Art/logo-crown.png)) - to be used on either a light or dark background.
+* logo-on-black ([SVG](https://github.com/nim-lang/assets/blob/master/Art/logo-on-black.svg)) - to be used on a dark background, add "nim" text.
+* legacy logos (https://github.com/nim-lang/assets/blob/master/Art/legacy) - where you can find old logo images.
 
 ## Licensing
 
